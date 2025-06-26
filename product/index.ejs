@@ -1,0 +1,18 @@
+<% layout('layout/boilerplate') -%>
+
+<h1 class="mb-4 text-center">All Products</h1>
+
+<div class="row">
+  <% products.forEach(product => { %>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow">
+        <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name %></h5>
+          <p class="card-text">₹<%= product.price %></p>
+          <p class="card-text"><%= product.desc %></p>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
